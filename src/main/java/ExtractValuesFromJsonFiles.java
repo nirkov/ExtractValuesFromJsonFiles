@@ -59,7 +59,7 @@ public class ExtractValuesFromJsonFiles {
 
             LinkedList answer = new LinkedList();
 
-            // Recursive walk from root folder through all sub folders and return the path to akk json file.
+            // Recursive walk from root folder through all sub folders and return the path to all json file.
             Stream<Path> myStream = Files.walk(dirName, Integer.MAX_VALUE);
             List<Path> allJsonsFilePaths = myStream.filter(path -> path.getFileName().toString().endsWith(".json")).collect(Collectors.toList());
 
